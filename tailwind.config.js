@@ -1,4 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `hsla(var(${variableName}), ${opacityValue})`;
+    }
+    return `hsla(var(${variableName}))`;
+  };
+}
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +17,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "clr-light-pink": withOpacity("--ligh-pink"),
+        "clr-grayish-purple": withOpacity("--grayish-purple"),
+        "clr-dark-purple": withOpacity("--dark-purple"),
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
