@@ -9,11 +9,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${workSans.className} max-w-[90rem] bg-slate-400 px-6 antialiased`}
-      >
-        {children}
+      <body className="grid h-svh place-items-center  bg-slate-400 md:h-screen">
+        <main
+          className={`${workSans.className} max-w-[90rem] bg-red-200 px-6 antialiased`}
+        >
+          {children}
+        </main>
       </body>
     </html>
   );
 }
+
+// <body className="bg-clr-very-dark-blue grid h-svh place-items-center  md:h-screen ">
+//   <main
+//     className={`${overpass.className} app max-w-[90rem] px-6 antialiased`}
+//   >
+//     {children}
+//   </main>
+// </body>;

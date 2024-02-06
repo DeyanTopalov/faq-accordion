@@ -1,5 +1,7 @@
+import FAQ from "@components/faq";
+
 const Home = () => {
-  return <h1 className="mt-2 p-4 text-2xl text-red-400">Hello</h1>;
+  return <FAQ />;
 };
 
 export default Home;
