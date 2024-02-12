@@ -18,7 +18,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "clr-light-pink": withOpacity("--ligh-pink"),
+        "clr-light-pink": withOpacity("--light-pink"),
         "clr-grayish-purple": withOpacity("--grayish-purple"),
         "clr-dark-purple": withOpacity("--dark-purple"),
       },

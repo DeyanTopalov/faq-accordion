@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="grid h-svh place-items-center  bg-slate-400 md:h-screen">
         <main
-          className={`${workSans.className} max-w-[90rem] bg-red-200 px-6 antialiased`}
+          className={`${workSans.className} max-w-[90rem] px-6 antialiased`}
         >
           {children}
         </main>
@@ -19,11 +19,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-// <body className="bg-clr-very-dark-blue grid h-svh place-items-center  md:h-screen ">
-//   <main
-//     className={`${overpass.className} app max-w-[90rem] px-6 antialiased`}
-//   >
-//     {children}
-//   </main>
-// </body>;
