@@ -3,7 +3,7 @@ import StarIcon from "./star-icon";
 
 const FAQ = () => {
   return (
-    <div className="rounded-lg bg-white p-6 md:rounded-3xl md:p-10">
+    <div className="rounded-lg bg-white p-6 shadow-2xl md:w-[37.5rem] md:rounded-3xl md:p-10">
       <div className="flex items-center justify-start gap-6">
         <div className="-ml-2">
           <StarIcon />
@@ -16,5 +16,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-
-// flex items-center justify-start gap-1
