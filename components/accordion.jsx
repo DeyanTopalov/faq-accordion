@@ -59,10 +59,10 @@ const Accordion = () => {
             {setIcon(index)}
           </button>
           <div
-            className={`faq-answer mt-6 ${openIndex === index ? "block  " : "hidden  "}`}
+            className={`faq-answer overflow-hidden transition-all duration-300 ease-out ${openIndex === index ? "mt-6 h-auto opacity-100" : "mt-0 h-0 opacity-0"}`}
           >
-            <div>
-              <p className="text-sm text-clr-grayish-purple ">{item.answer}</p>
+            <div className="overflow-hidden">
+              <p className="text-sm text-clr-grayish-purple">{item.answer}</p>
             </div>
           </div>
         </div>

@@ -1,9 +1,10 @@
 import Accordion from "./accordion";
 import StarIcon from "./star-icon";
+import BackgroundPattern from "./background_pattern";
 
 const FAQ = () => {
   return (
-    <div className="rounded-lg bg-white p-6 shadow-2xl md:w-[37.5rem] md:rounded-3xl md:p-10">
+    <div className="z-10 rounded-lg bg-white p-6 shadow-2xl md:w-[37.5rem] md:rounded-3xl md:p-10">
       <div className="flex items-center justify-start gap-6">
         <div className="-ml-2">
           <StarIcon />
