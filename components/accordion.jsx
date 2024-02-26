@@ -2,10 +2,12 @@
 import { useState, useEffect } from "react";
 import PlusIcon from "./plus-icon";
 import MinusIcon from "./minus-icon";
+import Skeleton from "./skeleton";
 
 const Accordion = () => {
   const [faqData, setFaqData] = useState([]);
   const [openIndex, setOpenIndex] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const setIcon = (index) => {
     return openIndex === index ? <MinusIcon /> : <PlusIcon />;
@@ -14,9 +16,12 @@ const Accordion = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+
         const response = await fetch("/data.json");
         const data = await response.json();
         setFaqData(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching FAQ data:", error);
       }
@@ -35,7 +40,9 @@ const Accordion = () => {
     });
   }, [openIndex]);
 
-  return (
+  return loading ? (
+    <Skeleton />
+  ) : (
     <section>
       {faqData.map((item, index) => (
         <div
